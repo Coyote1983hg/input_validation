@@ -45,23 +45,23 @@ class FormScreen extends StatelessWidget {
 
   String? validateEmail(String? input) {
     if (input == null || input.isEmpty || input.length < 5) {
-      return 'Bitte geben Sie eine gültige E-Mail-Adresse ein';
+      return 'Please enter a valid email address';
     }
     if (!input.contains('@')) {
-      return 'Die E-Mail-Adresse muss ein @-Zeichen enthalten';
+      return 'The email address must contain an @ sign';
     }
     if (!input.endsWith('.com') && !input.endsWith('.de')) {
-      return 'Die E-Mail-Adresse muss mit .com oder .de enden';
+      return 'The email address must end with .com or .de';
     }
     return null;
   }
 
   String? validatePw(String? input) {
     if (input == null || input.isEmpty) {
-      return 'Bitte geben Sie ein Passwort ein';
+      return 'Please enter a password';
     }
     if (input.length < 6 || input.length > 12) {
-      return 'Das Passwort muss zwischen 6 und 12 Zeichen lang sein';
+      return 'The password must be between 6 and 12 characters long';
     }
     return null;
   }
